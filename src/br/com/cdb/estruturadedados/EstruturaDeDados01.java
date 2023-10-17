@@ -17,5 +17,8 @@ public class EstruturaDeDados01 {
         notaAlunos.add(64);
         notaAlunos.add(88);
 
+        for(Integer nota : notaAlunos){
+            System.out.println(nota);
+        }
     }
 }
