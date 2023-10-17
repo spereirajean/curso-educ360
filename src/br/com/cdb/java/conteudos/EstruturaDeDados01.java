@@ -1,4 +1,4 @@
-package br.com.cdb.estruturadedados;
+package br.com.cdb.java.conteudos;
 
 import java.util.ArrayList;
 import java.util.Scanner;
