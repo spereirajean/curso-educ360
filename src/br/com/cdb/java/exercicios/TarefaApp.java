@@ -9,13 +9,17 @@ public class TarefaApp {
         Scanner input = new Scanner(System.in);
         ArrayList<String> ListaDeTarefas = new ArrayList<>();
 
-        System.out.println("Olá, seja muito bem vindo! " +
-                "Digite o número da ação que deseja realizar:\n" +
-                "1 - Adicionar tarefa \n"+
-                "2 - Remover tarefa\n" +
-                "3 - Listar tarefas\n" +
-                "4 - Listar em ordem alfabética\n" +
-                "5 - Listar em ordem cronológica");
+       int condicao = 0;
+
+       while (condicao >0) {
+           System.out.println("Olá, seja muito bem vindo! " +
+                   "Digite o número da ação que deseja realizar:\n" +
+                   "1 - Adicionar tarefa \n"+
+                   "2 - Remover tarefa\n" +
+                   "3 - Listar tarefas\n" +
+                   "4 - Listar em ordem alfabética\n" +
+                   "5 - Listar em ordem cronológica");
+       }
 
         int opcaoDesejada = input.nextInt();
 
