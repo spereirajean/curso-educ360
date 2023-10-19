@@ -8,22 +8,22 @@ public class Tarefa {
     Scanner input = new Scanner(System.in);
 
     private String nomeTarefa;
-    private int dataLimite;
+    private String dataLimite;
     private String descricao;
 
     public String getNomeTarefa(){
         return nomeTarefa;
     }
 
-    public void setNomeTarefa(){
+    public void setNomeTarefa(String nome1){
         this.nomeTarefa = nomeTarefa;
     }
 
-    public int getDataLimite() {
+    public String getDataLimite() {
         return dataLimite;
     }
 
-    public void setDataLimite(int dataLimite) {
+    public void setDataLimite(String dataLimite) {
         this.dataLimite = dataLimite;
     }
 

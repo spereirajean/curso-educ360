@@ -4,10 +4,14 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class TarefaApp {
-    public static void main(String[] args) {
 
+    static ArrayList<Tarefa> ListaDeTarefas = new ArrayList<>();
+    Tarefa tarefa = new Tarefa();
+
+    public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        ArrayList<String> ListaDeTarefas = new ArrayList<>();
+        ArrayList<Tarefa> listaDeTarefas = new ArrayList<>();
+        Tarefa tarefa = new Tarefa();
 
         int condicao = 0;
         while (condicao != 6) {
@@ -22,13 +26,30 @@ public class TarefaApp {
             condicao = input.nextInt();
             switch (condicao) {
                 case 1:
-                    adicionarTarefa();
+
+                    input = new Scanner (System.in);
+                    System.out.println("Insira o nome da nova tarefa:");
+                    String nome = input.nextLine();
+                    System.out.println("Crie uma descrição para esta tarefa:");
+                    String descricao = input.nextLine();
+                    System.out.println("Defina o prazo para a realização desta tarefa: (dd/mm/aaaa)");
+                    String prazo = input.nextLine();
+                    System.out.println("Tarefa adicionada com sucesso!");
+
+                    tarefa.setNomeTarefa(nome);
+                    tarefa.setDescricao(descricao);
+                    tarefa.setDataLimite(prazo);
+
+                    listaDeTarefas.add(tarefa);
+
                     break;
                 case 2:
                     System.out.println("Você selecionou a opção 2.");
                     break;
                 case 3:
-                    System.out.println("Você selecionou a opção 3.");
+                    for (Tarefa tarefa1 : listaDeTarefas){
+                        System.out.println(tarefa1.getNomeTarefa()+"-"+tarefa1.getDescricao()+"- "+tarefa1.getDataLimite());
+                    }
                     break;
                 case 4:
                     System.out.println("Você selecionou a opção 4.");
@@ -39,17 +60,5 @@ public class TarefaApp {
 
             }
         }
-    }
-    private static void adicionarTarefa() {
-
-        Scanner input = new Scanner(System.in);
-
-        System.out.println("Insira o nome da nova tarefa:");
-        String nome = input.nextLine();
-        System.out.println("Crie uma descrição para esta tarefa:");
-        String descricao = input.nextLine();
-        System.out.println("Defina o prazo para a realização desta tarefa: (dd/mm/aaaa)");
-        String prazo = input.nextLine();
-        System.out.println("Tarefa adicionada com sucesso!");
     }
 }
