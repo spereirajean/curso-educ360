@@ -9,7 +9,7 @@ public class Tarefa {
 
     private String nomeTarefa;
     private int dataLimite;
-    private String dia;
+    private String descricao;
 
     public String getNomeTarefa(){
         return nomeTarefa;
@@ -27,12 +27,12 @@ public class Tarefa {
         this.dataLimite = dataLimite;
     }
 
-    public String getDia() {
-        return dia;
+    public String getDescricao() {
+        return descricao;
     }
 
-    public void setDia(String dia) {
-        this.dia = dia;
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
     }
 
 
