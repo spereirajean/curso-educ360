@@ -1,11 +1,6 @@
 package br.com.cdb.java.exercicios;
 
-
-import java.util.Scanner;
-
 public class Tarefa {
-
-    Scanner input = new Scanner(System.in);
 
     private String nomeTarefa;
     private String dataLimite;
@@ -15,7 +10,7 @@ public class Tarefa {
         return nomeTarefa;
     }
 
-    public void setNomeTarefa(String nome1){
+    public void setNomeTarefa(String nome){
         this.nomeTarefa = nomeTarefa;
     }
 
