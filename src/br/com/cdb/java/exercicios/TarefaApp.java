@@ -20,6 +20,9 @@ public class TarefaApp {
                     "5 - Listar em ordem cronológica\n" +
                     "6 - Sair");
             condicao = input.nextInt();
+
+            input.nextInt();
+
             switch (condicao) {
                 case 1:
                     input = new Scanner(System.in);
