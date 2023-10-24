@@ -11,7 +11,7 @@ public class Tarefa {
     }
 
     public void setNomeTarefa(String nome){
-        this.nomeTarefa = nomeTarefa;
+        this.nomeTarefa = nome;
     }
 
     public String getDataLimite() {
