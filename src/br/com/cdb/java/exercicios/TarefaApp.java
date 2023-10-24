@@ -25,11 +25,11 @@ public class TarefaApp {
                    adicionarTarefa();
                     break;
                 case 2:
-                    System.out.println("Você selecionou a opção 2.");
+                    removerTarefa();
                     break;
                 case 3:
                     for (Tarefa tarefa1 : listaDeTarefas) {
-                        System.out.println(tarefa1.getNomeTarefa() + "-" + tarefa1.getDescricao() + "- " + tarefa1.getDataLimite());
+                        System.out.println(tarefa1.getNomeTarefa() + " - " + tarefa1.getDescricao() + " - " + tarefa1.getDataLimite());
                     }
                     break;
                 case 4:
@@ -70,5 +70,10 @@ public class TarefaApp {
             listaDeTarefas.add(tarefa);
 
         }
+    }
+    public static void removerTarefa(){
+        System.out.println("Digite o número da tarefa que deseja remover.");
+        int removerItem = input.nextInt();
+        listaDeTarefas.remove(0);
     }
 }
