@@ -72,8 +72,13 @@ public class TarefaApp {
         }
     }
     public static void removerTarefa(){
-        System.out.println("Digite o número da tarefa que deseja remover.");
-        int removerItem = input.nextInt();
-        listaDeTarefas.remove(0);
+        Scanner itemRemov = new Scanner(System.in);
+        System.out.println("Digite o nome da tarefa que deseja remover.");
+        String tarefaParaRemover = itemRemov.nextLine();
+        for(Tarefa remove : listaDeTarefas){
+            if (remove.getNomeTarefa().equals(tarefaParaRemover)){
+                listaDeTarefas.remove(tarefaParaRemover);
+            }
+        }
     }
 }
